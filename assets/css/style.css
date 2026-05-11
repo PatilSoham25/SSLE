@@ -1259,8 +1259,6 @@ body {
 
 /* ================= FOOTER ================= */
 
-/* ================= FOOTER ================= */
-
 .main-footer {
     background: #111;
     color: #fff;
@@ -1342,12 +1340,95 @@ body {
 
 /* ================= CONTACT ================= */
 
-.footer-contact li {
-    color: #cfcfcf;
-    line-height: 1.8;
-    word-break: break-word;
+.footer-column-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
+.footer-column-contact h3 {
+    color: #d4a017;
+    margin-bottom: 28px;
+    font-size: 22px;
+    position: relative;
+}
+
+.footer-contact li {
+    color: #cfcfcf;
+    line-height: 1.5;
+    word-break: break-word;
+    margin-bottom: 10px;
+}
+
+.footer-contact span {
+    padding-left: 15px;
+}
+
+.email-id {
+    padding: 0;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.social-icons a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.08);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+
+    padding: 0 !important;
+    line-height: 1;
+}
+
+/* ICON CENTER FIX */
+
+.social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* HOVER */
+
+.social-icons a:hover {
+    /* background: #658f17; */
+    color: #111;
+    transform: translateY(-4px);
+}
+
+/* REMOVE TEXT SHIFT */
+
+.social-icons a:hover {
+    padding-left: 0 !important;
+}
 /* ================= FOOTER BOTTOM ================= */
 
 .footer-bottom {
