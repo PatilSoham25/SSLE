@@ -1,6 +1,6 @@
 // ================= GALLERY ANIMATION =================
 
-const galleryItems =
+
     document.querySelectorAll('.gallery-item');
 
 window.addEventListener('scroll', () => {

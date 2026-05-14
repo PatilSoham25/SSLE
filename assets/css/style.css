@@ -18,31 +18,55 @@ body {
 
 /* ================= HEADER ================= */
 
+/* ================= HEADER ================= */
+
 .main-header {
     width: 100%;
     background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    position: sticky;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+
+    position: fixed;
     top: 0;
-    z-index: 999;
+    left: 0;
+
+    z-index: 9999;
+
     border-bottom: 5px solid rgb(224, 224, 59);
+
+    transition: 0.3s ease;
 }
+
+/* ================= NAVBAR ================= */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+
+    padding: 12px 0;
+}
+
+/* ================= LOGO ================= */
+
+.logo-section {
+    display: flex;
+    align-items: center;
 }
 
 .logo-section img {
     width: 150px;
     max-width: 100%;
+    object-fit: contain;
+    transition: 0.3s ease;
 }
+
+/* ================= NAV LINKS ================= */
 
 .nav-links {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 32px;
+
     list-style: none;
 }
 
@@ -50,19 +74,29 @@ body {
     text-decoration: none;
     color: #111;
     font-weight: 600;
-    transition: 0.3s;
+    font-size: 16px;
+
+    transition: 0.3s ease;
+
     position: relative;
 }
 
+/* UNDERLINE */
+
 .nav-links li a::after {
     content: '';
+
     position: absolute;
+
     left: 0;
-    bottom: -5px;
+    bottom: -6px;
+
     width: 0;
     height: 2px;
+
     background: #d4a017;
-    transition: 0.3s;
+
+    transition: 0.3s ease;
 }
 
 .nav-links li a:hover::after {
@@ -73,26 +107,32 @@ body {
     color: #d4a017;
 }
 
+/* ================= MENU BUTTON ================= */
+
 .menu-toggle {
     display: none;
-    font-size: 28px;
+
+    font-size: 30px;
     cursor: pointer;
+
     color: #111;
 }
 
-/* ================= RESPONSIVE HEADER ================= */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width: 992px) {
 
     .logo-section img {
-        width: 210px;
+        width: 190px;
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 22px;
     }
 
 }
+
+/* ================= MOBILE ================= */
 
 @media(max-width: 768px) {
 
@@ -101,21 +141,20 @@ body {
     }
 
     .navbar {
-        width: 100%;
-        padding: 10px 20px 5px 0;
+        padding: 12px 0;
         position: relative;
     }
 
     .logo-section img {
-        width: 140px;
+        width: 170px;
     }
 
-    /* MENU BUTTON */
+    /* MENU ICON */
 
     .menu-toggle {
-        margin-left: auto;
         display: block;
-        font-size: 30px;
+        font-size: 32px;
+        margin-left: auto;
         z-index: 1001;
     }
 
@@ -123,9 +162,12 @@ body {
 
     .nav-links {
         position: absolute;
+
         top: 100%;
         left: 0;
+
         width: 100%;
+
         background: #fff;
 
         flex-direction: column;
@@ -141,16 +183,17 @@ body {
         box-shadow: 0 10px 20px rgba(0,0,0,0.08);
     }
 
-    /* ACTIVE MENU */
+    /* ACTIVE */
 
     .nav-links.active {
         max-height: 500px;
-        padding: 15px 0;
+        padding: 10px 0;
     }
 
     .nav-links li {
         width: 100%;
         text-align: center;
+
         border-bottom: 1px solid #f1f1f1;
     }
 
@@ -160,7 +203,9 @@ body {
 
     .nav-links li a {
         display: block;
+
         padding: 16px 20px;
+
         font-size: 16px;
     }
 
@@ -170,6 +215,8 @@ body {
 
 }
 
+/* ================= SMALL MOBILE ================= */
+
 @media(max-width: 480px) {
 
     .logo-section img {
@@ -177,7 +224,7 @@ body {
     }
 
     .menu-toggle {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .nav-links li a {
@@ -186,7 +233,6 @@ body {
     }
 
 }
-
 /* ========================================== */
 
 /* ================= HERO SECTION ================= */
