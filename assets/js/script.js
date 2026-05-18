@@ -100,3 +100,43 @@ fetch('footer.html')
     document.getElementById('footer').innerHTML = data;
 
 });
+
+// ================= TOP SCROLLER =================
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    const scrollTopBtn =
+        document.getElementById('scrollTopBtn');
+
+    if(scrollTopBtn){
+
+        window.addEventListener('scroll', () => {
+
+            if(window.scrollY > 300){
+
+                scrollTopBtn.classList.add('show-scroll');
+
+            }
+
+            else {
+
+                scrollTopBtn.classList.remove('show-scroll');
+
+            }
+
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+
+            window.scrollTo({
+
+                top: 0,
+                behavior: 'smooth'
+
+            });
+
+        });
+
+    }
+
+});

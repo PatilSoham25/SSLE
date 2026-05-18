@@ -5,6 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     background: #ffffff;
     color: #222;
@@ -15,8 +19,6 @@ body {
     max-width: 1200px;
     margin: auto;
 }
-
-/* ================= HEADER ================= */
 
 /* ================= HEADER ================= */
 
@@ -1638,6 +1640,311 @@ body {
 
     .footer-logo {
         width: 170px;
+    }
+
+}
+
+/* ================= LOADER ================= */
+
+.site-loader {
+    position: fixed;
+    inset: 0;
+    background: #111;
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.5s ease;
+}
+
+.site-loader.hide-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo img {
+    width: 250px;
+    margin-bottom: 30px;
+    animation: pulseLogo 2s infinite;
+    border-radius: 10px;
+}
+
+.loader-spinner {
+    width: 65px;
+    height: 65px;
+
+    margin: auto;
+
+    border: 5px solid rgba(255,255,255,0.15);
+    border-top: 5px solid #d4a017;
+
+    border-radius: 50%;
+
+    animation: spinLoader 1s linear infinite;
+}
+
+.loader-content p {
+    color: #fff;
+    margin-top: 25px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* SPINNER */
+
+@keyframes spinLoader {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+/* LOGO ANIMATION */
+
+@keyframes pulseLogo {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+/* ================= SMOOTH ANIMATION ================= */
+
+.service-card,
+.gallery-item,
+.feature-card,
+.logo-item,
+.hero-content,
+.hero-image,
+.about-content,
+.about-right,
+.cta-content {
+    transition: all 0.4s ease;
+}
+
+/* ================= FLOAT EFFECT ================= */
+
+.feature-card:hover,
+.service-card:hover,
+.gallery-item:hover,
+.logo-item:hover {
+    transform: translateY(-10px);
+}
+
+/* ================= BUTTON GLOW ================= */
+
+.primary-btn,
+.about-btn,
+.gallery-btn,
+.view-services-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.primary-btn::before,
+.about-btn::before,
+.gallery-btn::before,
+.view-services-btn::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255,255,255,0.2);
+
+    transition: 0.5s ease;
+}
+
+.primary-btn:hover::before,
+.about-btn:hover::before,
+.gallery-btn:hover::before,
+.view-services-btn:hover::before {
+    left: 100%;
+}
+
+/* ================= IMAGE HOVER EFFECT ================= */
+
+.hero-image img,
+.gallery-item img,
+.service-image img {
+    transition: transform 0.6s ease;
+}
+
+.hero-image:hover img,
+.gallery-item:hover img,
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d4a017;
+    border-radius: 20px;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.scroll-top-btn,
+.whatsapp-float,
+.call-float {
+
+    position: fixed;
+
+    right: 20px;
+
+    width: 56px;
+    height: 56px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    z-index: 99999;
+
+    transition: 0.35s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* ================= TOP SCROLLER ================= */
+
+.scroll-top-btn {
+
+    bottom: 160px;
+
+    border: none;
+    outline: none;
+
+    background: #111;
+    color: #fff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(20px);
+}
+
+.scroll-top-btn.show-scroll {
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+
+    background: #d4a017;
+
+    transform: translateY(-5px);
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-float {
+
+    bottom: 90px;
+
+    background: #25D366;
+    color: #fff;
+
+    font-size: 30px;
+}
+
+.whatsapp-float:hover {
+
+    transform: translateY(-5px) scale(1.08);
+}
+
+/* ================= CALL BUTTON ================= */
+
+.call-float {
+
+    bottom: 20px;
+
+    background: #d4a017;
+    color: #fff;
+
+    font-size: 22px;
+}
+
+.call-float:hover {
+
+    background: #111;
+
+    transform: translateY(-5px) scale(1.08);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:480px){
+
+    .scroll-top-btn,
+    .whatsapp-float,
+    .call-float {
+
+        width: 48px;
+        height: 48px;
+
+        right: 10px;
+        overflow-x: hidden;
+    }
+
+    .scroll-top-btn {
+
+        bottom: 135px;
+        font-size: 16px;
+    }
+
+    .whatsapp-float {
+
+        bottom: 75px;
+
+        font-size: 24px;
+    }
+
+    .call-float {
+
+        bottom: 15px;
+
+        font-size: 18px;
     }
 
 }

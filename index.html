@@ -7,15 +7,34 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/SSLE_company_logo.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
 </head>
 <body>
+    <!-- ================= LOADER ================= -->
+
+    <div class="site-loader" id="site-loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                <img src="/assets/img/SSLE_company_logo.jpeg" alt="SSLE Logo">
+            </div>
+
+            <div class="loader-spinner"></div>
+
+            <p>Loading Industrial Solutions...</p>
+
+        </div>
+
+    </div>
+
     <div id="header"></div>
 
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="container hero-container">
 
-            <div class="hero-content">
+            <div class="hero-content" data-aos="fade-right">
 
                 <span class="hero-subtitle">
                     Industrial Engineering & Fabrication Solutions
@@ -43,7 +62,7 @@
 
             </div>
 
-            <div class="hero-image">
+            <div class="hero-image" data-aos="fade-left">
                 <img src="/assets/img/home-hero-sec.jfif"
                     alt="Cnc turning machine">
             </div>
@@ -57,7 +76,7 @@
 
             <!-- LEFT CONTENT -->
 
-            <div class="about-content">
+            <div class="about-content" data-aos="fade-right">
 
                 <span class="section-tag">
                     ABOUT COMPANY
@@ -92,7 +111,7 @@
 
             <!-- RIGHT IMAGE + CARDS -->
 
-            <div class="about-right">
+            <div class="about-right" data-aos="fade-left">
 
                
                 <div class="about-features">
@@ -191,7 +210,7 @@
 
                 <!-- Service 1 -->
 
-                <div class="service-card">
+                <div class="service-card" data-aos="zoom-in">
 
                     <div class="service-image">
                         <img src="/assets/img/services/VMC-machine.jfif"
@@ -224,7 +243,7 @@
 
                 <!-- Service 2 -->
 
-                <div class="service-card">
+                <div class="service-card" data-aos="zoom-in">
 
                     <div class="service-image">
                         <img src="/assets/img/services/Heavy-duty-lathe.jfif"
@@ -255,7 +274,7 @@
 
                 <!-- Service 3 -->
 
-                <div class="service-card">
+                <div class="service-card" data-aos="zoom-in">
 
                     <div class="service-image">
                         <img src="/assets/img/services/Key-slotting-machine.jfif"
@@ -326,7 +345,7 @@
 
                 <!-- ITEM 1 -->
 
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="fade-up">
                     <img src="/assets/img/fabrication/crane-wheels.jfif"
                         alt="Crane Wheels">
 
@@ -337,7 +356,7 @@
 
                 <!-- ITEM 2 -->
 
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="fade-up">
                     <img src="/assets/img/fabrication/gear-box.jfif"
                         alt="Gear Box">
 
@@ -348,7 +367,7 @@
 
                 <!-- ITEM 3 -->
 
-                <div class="gallery-item">
+                <div class="gallery-item" data-aos="fade-up">
                     <img src="/assets/img/fabrication/fabrications.jfif"
                         alt="Fabrication Machine">
 
@@ -492,7 +511,7 @@
 
         <div class="container">
 
-            <div class="cta-content">
+            <div class="cta-content" data-aos="zoom-in">
 
                 <span class="cta-tag">
                     GET IN TOUCH
@@ -528,6 +547,39 @@
 
     <div id="footer"></div>
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
     <script src="assets/js/script.js"></script>
+
+    <script src="assets/js/loader.js"></script>
+
+    <!-- ================= FLOATING BUTTONS ================= -->
+
+    <!-- TOP SCROLLER -->
+
+    <button id="scrollTopBtn" class="scroll-top-btn">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- WHATSAPP -->
+
+    <a href="https://wa.me/919527332195"
+        class="whatsapp-float"
+        target="_blank">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+    </a>
+
+    <!-- CALL BUTTON -->
+
+    <a href="tel:+91 95273 32195"
+        class="call-float">
+
+        <i class="fa-solid fa-phone"></i>
+
+    </a>
 </body>
 </html>
